@@ -1,0 +1,47 @@
+<%- include("../templates/encabezado") %>
+<%- include("../templates/menu") %>
+
+<div class="container nt-5"></div>
+<div class="card">
+    <div class="car-header">
+        <h1>Usuarios</h1>
+    </div>
+    <div class="car-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Usuario</th>
+                    <th>Password</th>
+                    <th>Foto</th>
+                    <th>Editar/Borrar</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <%
+                usuarios.forEach((usuario)=>{
+                %>
+                <tr>
+                    <td><%= usuario.id %></td>
+                    <td><%= usuario.nombre%></td>
+                    <td><%= usuario.usuario%></td>
+                    <td>********</td>
+                    <td><img src="/images/<%= usuario.foto%>" width="100px" alt=""> </td>
+                    <td>
+                        <a href="/editarUsuario/<%= usuario.id %>"> Editar </a>
+                        <a href="/borrarUsuario/<%= usuario.id %>"> Borrar </a>
+                    </td>
+                </tr>
+                <%
+             });
+                %>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer"></div>
+</div>
+</div>
+
+<%- include("../templates/pie") %>

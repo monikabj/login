@@ -1,0 +1,24 @@
+<%- include("../templates/encabezado") %>
+<%- include("../templates/menu") %>
+<div class="container">
+<form action="/productos/nuevoproducto" method="post">
+    <div class="card">
+        <div class="card-header">
+        <h1>Nuevo Producto</h1>
+    </div>
+            <div class="card-body">
+                <input class="form-control mb-3" type="text" name="nombre" id="nombre" placeholder="Nombre" autofocus>
+                <input class="form-control mb-3" type="text" name="cantidad" id="cantidad" placeholder="Cantidad" >
+                <input class="form-control mb-3" type="text" name="precio" id="precio" placeholder="Precio" >
+                
+            </div>
+                <div class="card-footer"></div>
+                <input class="form-control mb-3" type="file" name="foto" id="foto" placeholder="Selecciona tu foto">
+                <button class="btn btn-primary mb-3" type="submit">Guardar producto</button>
+                <button class="btn btn-secondary" type="reset">Limpiar campos</button>
+               
+
+    </div>
+</form>
+</div>
+<%- include("../templates/pie") %>
